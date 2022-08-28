@@ -1,0 +1,138 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: Roboto, Arial, Helvetica, sans-serif;   
+}
+
+body{
+    margin: 0;
+}
+
+.video-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem 1rem;
+    padding: 2rem 0;
+    margin: 0 1.5rem;
+    border-top: 4px solid #CCC;
+}
+
+
+.video-section:first-child{
+    border-top: none;
+}
+
+.video-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnail{
+    position: relative;
+    display: flex;
+}
+
+.thumbnail::before{
+  content: attr(data-duration);
+  position: absolute;
+  background-color: rgba(0, 0, 0, .85);
+  color: white;
+  right: 5px;
+  bottom: 5px;
+  padding: .1em .3em;
+  border-radius: .3em;
+  font-size: .9rem;
+}
+
+
+.thumbnail-img{
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height: 150px;
+    background-color: #AAA;
+}
+
+.video-bottom-section{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.channel-icon{
+    margin-right: .75rem;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background-color: #AAA;
+}
+
+.video-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.video-title{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-decoration: none;
+    color: black;
+}
+
+.video-channel-name{
+    margin-bottom: .1rem;
+    text-decoration: none;
+    color: #555;
+    transition: color 150ms;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.video-channel-name:hover{
+    color: #111;
+}
+
+.video-metadata{
+    color: #555;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.section-title-text{
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-bottom: -20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #111;
+    transition: color 300ms;
+    border-top: 2px solid #AAA;
+    padding-top: 10px;
+}
+
+.section-title-text:hover{
+ color: #555;
+ transition: color 300ms;
+}
+
+.oktube-logo {
+    height: 70px;
+    padding-left: 7px;
+    margin-top: -12px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: -50px;
+}
+
+.menu-channel-icon{
+width:45px;
+border-radius: 50%;
+margin-right: 12px;
+}
